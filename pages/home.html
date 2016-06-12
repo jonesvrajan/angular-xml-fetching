@@ -1,5 +1,5 @@
-<div>
-<div class="jumbotron">
+<div ng-controller="xmlController as xmlCtrl">
+  <div class="jumbotron">
       <div class="container">
         <form ng-submit="xmlCtrl.submitUrl()" name="searchForm">
           <ul class="form-list ul-reset">
@@ -11,11 +11,11 @@
               class="form-control" 
               ng-model="xmlCtrl.user.url" 
               required
-              ng-minlength="4"/>
+              ng-minlength="4"
+              placeholder="http://example.com"/>
             
               <p ng-show="searchForm.url.$invalid && !searchForm.url.$pristine" 
               class="help-block error">Enter a valid url.</p>
-              <p id="error-msg" class="help-block error"></p>
             </li>
             <li>
               <code>
